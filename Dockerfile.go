@@ -4,6 +4,7 @@ FROM golang:1.23-alpine AS builder
 # 设置Go代理（中国区加速）
 ENV GOPROXY=https://goproxy.cn,direct
 ENV GOSUMDB=sum.golang.google.cn
+ENV GOTOOLCHAIN=auto
 
 # 安装必要的构建工具
 RUN apk add --no-cache git gcc musl-dev sqlite-dev
