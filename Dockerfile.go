@@ -1,5 +1,5 @@
 # 多阶段构建 - 优化的Go Docker镜像
-FROM golang:1.21-alpine AS builder
+FROM golang:1.23-alpine AS builder
 
 # 设置Go代理（中国区加速）
 ENV GOPROXY=https://goproxy.cn,direct
