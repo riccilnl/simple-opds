@@ -1,0 +1,59 @@
+# Binaries
+opds-server
+opds-server.exe
+opds-server-*
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file
+go.work
+
+# Dependency directories
+vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build artifacts
+dist/
+build/
+
+# Sample data (do not commit)
+books/
+
+# Python artifacts (old version)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Backup files
+*.backup
+*.backup_
+*_fixed.py
+*_fixed_final.py
+
+# Test directories
+Test/

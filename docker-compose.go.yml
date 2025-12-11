@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  opds-go:
+    build:
+      context: .
+      dockerfile: Dockerfile.go
+    container_name: calibre-opds-go
+    ports:
+      - "1580:1580"
+    volumes:
+      - ./books:/books:ro
+    environment:
+      - CALIBRE_DB_PATH=/books/metadata.db
+      - CALIBRE_BOOKS_PATH=/books
+      - OPDS_HOST=0.0.0.0
+      - OPDS_PORT=1580
+      - LOG_LEVEL=INFO
+      - ENVIRONMENT=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:1580/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

@@ -1,0 +1,23 @@
+# Docker ignore file
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+pip-log.txt
+pip-delete-this-directory.txt
+.venv
+.git
+.gitignore
+README.md
+Dockerfile*
+docker-compose*
+.dockerignore
+op
+analyze_calibre_db.py
+add_test_data.py
+project_analysis*.md
+calibre_db_structure.json
+*.log
+.vscode

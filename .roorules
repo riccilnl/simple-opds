@@ -1,0 +1,22 @@
+# .roorules 
+## 基础要求
+# 铁律1：任何测试文件必须落盘到 .\Test\ 目录，命名 test_*.py 或 *_test.py
+# 铁律2：任何说明文件必须落盘到 .\md\ 目录，后缀 .md
+# 铁律3：不能自己启动项目服务，需要告诉用户，让用户自己启动
+# 环境：Windows 11 + Python 3.14
+# 路径分隔符一律用反斜杠 \
+# 运行测试命令：python -m pytest .\Test\ -v
+# 禁止生成 __pycache__、.pytest_cache、*.pyc；如已出现自动跳过
+# 开发文件必须在文件头部写上版本号，大功能增加用大版本号，小功能或者bug修复用小版本号
+## Windows 原生/必装命令：
+# 1.1 允许：dir、type、copy、move、del、mkdir、rmdir、cd、python、pytest、pip、where、findstr
+# 1.2 禁止：ls、cat、touch、rm、cp、mv、grep、which、wget、curl、find(Unix版)
+# 2. 路径分隔符一律反斜杠 \；盘符如 C:\ 不可省略
+# 3. 清屏用 cls，不用 clear
+# 4. 查看文件内容一律用 type，不用 cat
+# 5. 测试/文档目录强制落地 .\Test 与 .\md，不依赖 Git、Bash、WSL
+# 6. 若需要“批量替换文本”，用 PowerShell 一行：
+#    powershell -Command "(Get Content xxx.py) -replace 'old','new' | Set-Content xxx.py"
+# 7. 任何脚本第一行不得写 shebang #!/usr/bin/env python
+# 8. 运行pytest命令优先：python -m pytest .\Test\<文件> -v
+#    失败时回退：python .\Test\<文件> -v
